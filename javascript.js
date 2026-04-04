@@ -21,7 +21,7 @@ const wind = document.querySelector('.wind');
 getcity.addEventListener('click', async function() {
     cityCardName.textContent = cityName.value;
 
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName.value}&limit=1&appid=${APIkey}`)
+    const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName.value}&limit=1&appid=${APIkey}`)
     const data = await response.json()
 
     lon = data[0]['lon']
